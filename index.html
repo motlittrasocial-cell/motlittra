@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiệm Trà Chân Thành</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-item active" onclick="switchTab('landing')">Thông tin</div>
+            <div class="nav-item" onclick="switchTab('order')">Đặt hàng</div>
+            <div class="nav-item" onclick="switchTab('upload')">Gửi lời nhắn</div>
+            <div class="nav-item" onclick="switchTab('receive')">Nhận quà</div>
+            <div class="nav-item" onclick="switchTab('tracking')">Tra cứu</div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="tab-landing" class="tab-content active">
+            <div class="hero-section">
+                <img src="anh-nen.jpg" alt="Ảnh nền Tiệm Trà" class="hero-image">
+            </div>
+
+            <div class="story-section">
+                <h2>Chuyện trà</h2>
+                <p>Từ một tách trà nhỏ, đôi khi người ta gửi gắm cả những điều khó nói thành lời. Trà Ủ Nhớ Thương là 50g trà oolong lài từ Lâm Đồng, hương thơm nhẹ nhàng, vị tròn đầy, thanh dịu.</p>
+                <p>Mỗi hộp trà không chỉ là một món quà tinh tế, mà còn đi kèm một lời nhắn dịu dàng được gửi gắm qua giọng nói, để những yêu thương không chỉ được cảm nhận qua vị trà, mà còn được nghe bằng trái tim.</p>
+            </div>
+
+            <div class="product-info">
+                <div class="product-layout">
+                    <div class="product-slider">
+                        <div class="slider-track" id="slider-track">
+                            <img src="anh-thong-tin-1.jpg" alt="Góc chụp 1" class="slide">
+                            <img src="anh-thong-tin-2.jpg" alt="Góc chụp 2" class="slide">
+                            <img src="anh-thong-tin-3.jpg" alt="Góc chụp 3" class="slide">
+                            <img src="anh-thong-tin-4.jpg" alt="Góc chụp 4" class="slide">
+                        </div>
+                        <button class="slider-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                        <button class="slider-btn next" onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+
+                    <div class="product-details">
+                        <h4 class="product-title">TRÀ Ủ NHỚ THƯƠNG</h4>
+                        <p class="product-price">145.000 VNĐ</p>
+                        <p><strong>Thành phần:</strong> Trà oolong (98.3%), hoa lài khô (1.2%), hương liệu lài giống tự nhiên</p>
+                        <p><strong>Hương vị:</strong> Vị chát nhẹ đầu lưỡi, sau đó là hậu ngọt dễ chịu, hương lài, hoa khô</p>
+                        <p><strong>Khối lượng:</strong> 50g</p>
+                        <p><strong>Nguồn gốc:</strong> Lâm Đồng</p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="faq-section">
+    <h3>Điều bạn còn băn khoăn</h3>
+    
+    <details>
+        <summary>Người khác có thể nghe được lời nhắn của tôi không?</summary>
+        <p>Lời nhắn được bảo vệ qua Mã đơn hàng và Số điện thoại của người nhận. Chỉ khi nhập đúng hai thông tin này, người nhận mới có thể mở giao diện máy phát và nghe được lời nhắn.</p>
+    </details>
+
+    <details>
+        <summary>Tôi có thể thay đổi lời nhắn sau khi đã đặt hàng không?</summary>
+        <p>Bạn hoàn toàn có thể cập nhật lại file ghi âm trên website, miễn là thao tác này được thực hiện trước khi Tiệm bàn giao đơn hàng cho đơn vị vận chuyển.</p>
+    </details>
+
+    <details>
+        <summary>Lời nhắn audio được lưu trữ trên web trong bao lâu?</summary>
+        <p>Lời nhắn sẽ được lưu giữ trên hệ thống của Tiệm trong vòng 30 ngày. Ngoài ra, khi mở hộp quà, người nhận có thể nhập email để hệ thống gửi tặng một bản sao lưu giúp cất giữ lâu dài.</p>
+    </details>
+
+    <details>
+        <summary>Pha trà như thế nào để giữ được hương vị ngon nhất?</summary>
+        <p>Nhiệt độ nước lý tưởng để pha trà oolong lài là khoảng 80-85°C. Bạn nên hãm trà trong khoảng 30 đến 40 giây rồi rót ra ngay để giữ được vị thanh dịu và hương thơm tự nhiên của hoa lài.</p>
+    </details>
+
+    <details>
+        <summary>Một hộp trà 50g có thể dùng được trong bao lâu?</summary>
+        <p>Với khối lượng 50g, bạn có thể pha được khoảng 10 đến 15 ấm trà, mỗi ấm sẽ vừa vặn cho 1 đến 2 người cùng nhâm nhi thưởng thức.</p>
+    </details>
+
+    <details>
+        <summary>Uống trà oolong lài có gây mất ngủ không?</summary>
+        <p>Trà oolong có hàm lượng caffeine tương đối thấp, đồng thời hương hoa lài có tác dụng thư giãn rất tốt. Tuy nhiên, nếu là người nhạy cảm với caffeine, bạn nên ưu tiên thưởng thức trà vào buổi sáng hoặc đầu giờ chiều để có một giấc ngủ trọn vẹn nhất.</p>
+    </details>
+</div>
+
+            <button class="cta-button" onclick="switchTab('order')">Gửi lời yêu thương của bạn tại đây..</button>
+
+            <footer class="footer-info">
+                <hr>
+                <p><strong>CÔNG TY TNHH MOTLITTRA</strong></p>
+               	<p>Số điện thoại: 0798 563 705</p>
+                <p>Email: motlittra.adm@gmail.com</p>
+                
+                <div class="social-links">
+                    <a href="https://facebook.com/tiemcua-ban" target="_blank">Facebook</a> ||
+                    <a href="https://instagram.com/tiemcua-ban" target="_blank">Instagram</a> |
+                    <a href="https://tiktok.com/@tiemcua-ban" target="_blank">TikTok</a>
+                </div>
+            </footer>
+        </section>
+
+        <section id="tab-order" class="tab-content">
+            <h2>🎁 Đặt trà & Gửi lời nhắn</h2>
+            
+            <div class="order-form" id="main-order-form">
+                
+                <div class="input-group summary-box">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="anh-nen.jpg" alt="Trà Ủ Nhớ Thương" style="width: 60px; height: 60px; object-fit: cover; border-radius: 8px;">
+                        <div style="flex-grow: 1;">
+                            <strong style="color: var(--primary-color);">Trà Ủ Nhớ Thương</strong>
+                            <p style="margin: 5px 0; font-size: 0.9rem;">145.000 VNĐ / Hộp</p>
+                        </div>
+                        <div class="qty-control">
+                            <button type="button" class="btn-minus" onclick="changeQty(-1)">-</button>
+                            <input type="number" id="order-qty" value="1" min="1" readonly>
+                            <button type="button" class="btn-plus" onclick="changeQty(1)">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <p class="section-label">Thông tin người đặt:</p>
+                    <input type="text" class="custom-input" id="order-sender-name" placeholder="Tên của bạn">
+                    <input type="tel" class="custom-input" id="order-sender-phone" placeholder="Số điện thoại của bạn">
+                </div>
+
+                <div class="input-group radio-group box-highlight">
+                    <p class="section-label">Bạn mua trà để:</p>
+                    <label><input type="radio" name="order-purpose" value="self" checked onchange="handlePurposeChange()"> 🙋‍♂️ Thưởng thức (Gửi chính mình)</label>
+                    <label><input type="radio" name="order-purpose" value="gift" onchange="handlePurposeChange()"> 🎁 Biếu tặng (Gửi người thương)</label>
+                </div>
+
+                <div class="input-group">
+                    <p class="section-label">Thông tin giao hàng:</p>
+                    <input type="text" class="custom-input" id="order-receiver-name" placeholder="Tên người nhận" readonly>
+                    <input type="tel" class="custom-input" id="order-receiver-phone" placeholder="Số điện thoại người nhận" readonly>
+                    
+                    <div class="custom-dropdown" id="box-province">
+                        <div class="dropdown-selected" onclick="toggleDropdown('province')">-- Chọn Tỉnh/Thành phố --</div>
+                        <div class="dropdown-menu" id="menu-province">
+                            <input type="text" class="dropdown-search" placeholder="🔍 Gõ vài chữ để tìm tỉnh..." oninput="filterDropdown('province')">
+                            <ul class="dropdown-list" id="list-province"></ul>
+                        </div>
+                    </div>
+                    <input type="hidden" id="order-province" value="">
+
+                    <div class="custom-dropdown disabled" id="box-ward">
+                        <div class="dropdown-selected" onclick="toggleDropdown('ward')">-- Chọn Phường/Xã --</div>
+                        <div class="dropdown-menu" id="menu-ward">
+                            <input type="text" class="dropdown-search" placeholder="🔍 Gõ vài chữ để tìm phường..." oninput="filterDropdown('ward')">
+                            <ul class="dropdown-list" id="list-ward"></ul>
+                        </div>
+                    </div>
+                    <input type="hidden" id="order-ward" value="">
+                    
+                    <input type="text" class="custom-input" id="order-street" placeholder="Số nhà, Tên đường (VD: 123 Lê Lợi)" oninput="updateFinalAddress()">
+                    
+                    <div id="address-preview-box" class="preview-box" style="display: none;">
+                        <p style="margin:0; font-size: 0.85rem; color: #757575;">📍 Sẽ giao đến:</p>
+                        <strong id="address-preview-text" style="color: var(--primary-color);">...</strong>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <p class="section-label">Ghi chú cho Tiệm:</p>
+                    <textarea class="custom-input" id="order-note" rows="2" placeholder="Ví dụ: Giao ngoài giờ hành chính, gọi điện trước khi giao..."></textarea>
+                </div>
+
+                <div class="input-group cost-box">
+                    <div class="cost-row"><span>Tiền trà:</span> <strong id="calc-tea-price">145.000 đ</strong></div>
+                    <div class="cost-row"><span>Phí vận chuyển:</span> <strong id="calc-ship-price">Đang tính...</strong></div>
+                    <hr style="border: 0; border-top: 1px dashed #ccc; margin: 10px 0;">
+                    <div class="cost-row" style="font-size: 1.1rem; color: #d84315;"><span>Tổng thanh toán:</span> <strong id="calc-total-price">...</strong></div>
+                </div>
+
+                <div class="input-group radio-group">
+                    <p class="section-label">Hình thức thanh toán:</p>
+                    <div id="payment-options">
+                        <label id="opt-cod"><input type="radio" name="payment-method" value="cod" checked onchange="handlePaymentChange()"> Nhận hàng thanh toán (COD)</label>
+                        <label id="opt-ck"><input type="radio" name="payment-method" value="ck" onchange="handlePaymentChange()"> Chuyển khoản ngân hàng</label>
+                    </div>
+
+                    <div id="bank-transfer-box" class="bank-text-box" style="display: none; text-align: center;">
+                        <p style="text-align: left;">Ngân hàng: <strong>Vietcombank</strong></p>
+                        <p style="text-align: left;">Chủ TK: <strong>TIEM TRA CHAN THANH</strong></p>
+                        <p style="text-align: left;">Số tài khoản: <strong id="stk" class="copy-hint" onclick="copyText('123456789', 'Số tài khoản')">123456789</strong> 📋</p>
+                        <p style="text-align: left;">Số tiền: <strong id="ck-amount" class="copy-hint" onclick="copyText(document.getElementById('calc-total-price').innerText.replace(/\D/g,''), 'Số tiền')">...</strong> 📋</p>
+                        <p style="text-align: left;">Nội dung CK: <strong id="ck-content" class="copy-hint" onclick="copyText(document.getElementById('ck-content').innerText, 'Nội dung')">...</strong> 📋</p>
+                        
+                        <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">Mã QR Tự động (Đã bao gồm số tiền và nội dung):</p>
+                        <img id="qr-image" src="" alt="Mã QR" style="width: 180px; display: block; margin: 10px auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <a id="download-qr" href="#" download="QR_ThanhToan_TiemTra.png" class="download-btn" style="display: inline-block; margin-top: 10px; color: var(--primary-color); font-weight: bold; text-decoration: none;">⬇️ Tải ảnh QR về máy</a>
+                        
+                        <label for="receipt-file" class="custom-upload-box" style="margin-top: 20px;">
+                            <div class="upload-icon">📥</div>
+                            <strong id="receipt-text">Tải ảnh chụp màn hình CK lên đây</strong>
+                        </label>
+                        <input type="file" id="receipt-file" accept="image/*" style="display:none;" onchange="updateFileName(this, 'receipt-text', 'Tải ảnh chụp màn hình CK lên đây')">
+                    </div>
+                </div>
+
+                <div id="audio-option-box" class="input-group audio-options" style="display: none;">
+                    <p class="section-label">Bạn muốn gửi file âm thanh khi nào?</p>
+                    <div class="radio-group">
+                        <label><input type="radio" name="audio-choice" value="now" checked> Gửi ngay bây giờ</label>
+                        <label><input type="radio" name="audio-choice" value="later"> Gửi sau</label>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #d84315; margin-top: 5px;">*Lưu ý: Tiệm chỉ nhận file trong vòng 24h kể từ khi đặt hàng thành công.</p>
+                </div>
+
+                <div class="input-group" style="background: transparent; box-shadow: none; padding: 0 5px; margin-bottom: 5px;">
+                    <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.9rem;">
+                        <input type="checkbox" id="agree-policy" style="margin-top: 4px; transform: scale(1.3); accent-color: var(--primary-color);">
+                        <span>Tôi đã đọc và đồng ý với <a href="#" onclick="openPolicyModal(event)" style="color: var(--primary-color); font-weight: bold; text-decoration: underline;">Chính sách Mua hàng & Bảo mật</a> của Tiệm.</span>
+                    </label>
+                </div>
+                
+                <button class="confirm-button" onclick="handleOrderSubmit()">Xác nhận đặt hàng</button>    
+            </div>
+
+            <div id="order-success-box" style="display:none; text-align:center; padding: 20px; background: #f9fbe7; border-radius: 15px; margin-top: 20px;">
+                <h3>🎉 Đặt hàng thành công!</h3>
+                <p>Mã đơn hàng của bạn là:</p>
+                <h2 id="final-id" style="color: var(--primary-color); font-size: 1.8rem; letter-spacing: 2px; margin: 10px 0;"></h2>
+                
+                <button onclick="copyText(document.getElementById('final-id').innerText, 'Mã đơn hàng')" style="background: white; border: 1.5px solid var(--primary-color); color: var(--primary-color); padding: 8px 20px; border-radius: 20px; font-weight: bold; cursor: pointer; margin-bottom: 15px;">📋 Sao chép Mã đơn</button>
+                <p style="font-size: 0.9rem; color: #d84315;">*Vui lòng <strong>Sao chép</strong> hoặc <strong>Chụp màn hình</strong> mã đơn này để tra cứu và gửi lời nhắn nhé!</p>
+                
+                <button class="cta-button" id="btn-go-to-upload" style="display: none; margin-top: 15px;">Tiếp tục gửi lời nhắn 🎙️</button>
+            </div>
+        </section>
+
+        <section id="tab-upload" class="tab-content">
+            <h2>🎙️ Gửi gắm tâm tình</h2>
+            <p id="info-check-msg" style="display:none; color: var(--primary-color);"><em>Thông tin tự động điền từ bước trước!</em></p>
+            
+            <input type="text" class="custom-input" id="upload-id" placeholder="Mã đơn hàng (VD: TEA26-QT-001)">
+            <input type="tel" class="custom-input" id="upload-phone" placeholder="Số điện thoại người gửi">
+            
+            <div style="margin: 20px 0;">
+                <p class="section-label">Chọn file ghi âm (Tối đa 5MB):</p>
+
+                <label for="audio-file" class="custom-upload-box">
+                    <div class="upload-icon">🎵</div>
+                    <strong id="audio-text">Nhấn để tải file ghi âm lên</strong>
+                </label>
+                <input type="file" id="audio-file" accept="audio/*" style="display:none;" onchange="updateFileName(this, 'audio-text', 'Nhấn để tải file ghi âm lên')">
+            </div>
+            <p style="font-size: 0.85rem; color: #d84315; margin-top: 5px; line-height: 1.4;">
+                *Lưu ý: Bạn có thể thay đổi file ghi âm trước khi đơn hàng được bàn giao cho đơn vị vận chuyển. Sau thời điểm đó, Tiệm xin phép không hỗ trợ cập nhật thêm.
+            </p>
+            <button class="confirm-button" id="btn-upload-audio" onclick="handleAudioUpload()">Gửi Audio cho Tiệm</button>
+        </section>
+
+        <section id="tab-receive" class="tab-content">
+            <div class="cassette-room-container">
+                
+                <div class="wooden-board-wrapper" id="index-card-form">
+                    <div class="wooden-board-content">
+                        <h3 class="board-title">HỒ SƠ KỶ VẬT</h3>
+                        
+                        <div class="input-group-board">
+                            <input type="text" id="receive-code" class="board-input" placeholder="Mã đơn hàng (VD: TEA26...)">
+                            <input type="tel" id="receive-phone" class="board-input" placeholder="Số điện thoại nhận">
+                        </div>
+                        
+                        <div id="email-request-box" style="display: none; margin-top: 10px;">
+                            <input type="email" id="receive-email" class="board-input" placeholder="Nhập Email nhận bản sao...">
+                        </div>
+
+                        <button class="board-btn" id="btn-check-gift" onclick="checkGift()">TÌM CUỘN BĂNG</button>
+                        <p id="receive-note" class="board-status">Trạng thái: Sẵn sàng tra cứu...</p>
+                    </div>
+                </div>
+
+                <div class="cassette-player-wrapper" id="memory-box" style="display: none;">
+                    <div class="tape-label-box">
+                        <span id="tape-order-id">TEA26-QT-...</span>
+                    </div>
+
+                    <button id="play-pause-btn" class="invisible-play-btn" onclick="toggleAudio()" title="Play/Pause"></button>
+                    <button id="btn-stop-audio" class="invisible-stop-btn" onclick="stopAudio()" title="Stop"></button>
+                    <button id="btn-eject-audio" class="invisible-eject-btn" onclick="ejectTape()" title="Eject"></button>
+
+                    <audio id="hidden-audio-player" style="display: none;" ontimeupdate="updateProgress()" onended="resetArchive()"></audio>
+
+                    <div class="cassette-instruction-note">
+                        <div class="note-line"><span>▶</span> Bấm <b>Play</b> (phím 4) để phát hoặc tạm dừng nhạc</div>
+                        <div class="note-line"><span>■</span> Bấm <b>Stop</b> (phím 5) để dừng hẳn nhạc</div>
+                        <div class="note-line"><span>⏏</span> Bấm <b>Eject</b> (phím 6) để lấy cuộn băng ra ngoài</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-tracking" class="tab-content">
+            <h2>📦 Lộ trình trao gửi</h2>
+            <div class="input-group">
+                <input type="text" class="custom-input" id="track-id" placeholder="Mã đơn hàng">
+                <input type="tel" class="custom-input" id="track-phone" placeholder="Số điện thoại người nhận">
+                <button class="confirm-button" onclick="handleTracking()">Kiểm tra tình trạng</button>
+            </div>
+
+            <div id="tracking-result-box" style="display: none; margin-top: 20px; text-align: center; padding: 20px; border-radius: 12px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <p>Trạng thái đơn hàng <strong id="res-id"></strong></p>
+                <h3 id="res-status" style="color: var(--primary-color);"></h3>
+                <a href="#" id="res-link" target="_blank" style="display: none; background-color: #8d6e63; color: white; padding: 10px 20px; text-decoration: none; border-radius: 20px; margin-top: 10px;">🚚 Theo dõi lộ trình tại đây</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="policy-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; justify-content: center; align-items: center; padding: 20px;">
+        <div style="background: white; width: 100%; max-width: 550px; max-height: 85vh; border-radius: 15px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">
+            <div style="padding: 15px 20px; background: var(--primary-color); color: white; display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; color: white; font-size: 1.2rem;">Chính sách & Bảo mật</h3>
+                <span onclick="closePolicyModal()" style="font-size: 1.5rem; cursor: pointer; font-weight: bold;">&times;</span>
+            </div>
+            
+            <div id="policy-content-container" style="padding: 10px 20px; overflow-y: auto;">
+            </div>
+            
+            <div style="padding: 15px; text-align: center; border-top: 1px solid #eee; background: #fafafa;">
+                <button onclick="closePolicyModal()" class="cta-button" style="margin-top: 0; padding: 10px 20px; width: auto; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; cursor: pointer;">Đã hiểu & Đóng</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="custom-toast" style="visibility: hidden; min-width: 250px; background-color: #fff; color: #333; text-align: center; border-radius: 8px; padding: 16px; position: fixed; z-index: 10000; left: 50%; transform: translateX(-50%); top: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-left: 5px solid var(--primary-color); opacity: 0; transition: opacity 0.3s, top 0.3s; font-size: 0.95rem; font-weight: 500;">
+        <span id="toast-icon" style="margin-right: 8px; font-size: 1.2rem;">🔔</span>
+        <span id="toast-msg">Đây là thông báo!</span>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
