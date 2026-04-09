@@ -176,7 +176,7 @@ details p { margin: 10px 0 0 0; font-size: 0.9rem; }
 
 .board-title {
     color: #4e342e;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     font-weight: bold;
     font-size: 1.3rem;
     margin-bottom: 20px;
@@ -193,7 +193,7 @@ details p { margin: 10px 0 0 0; font-size: 0.9rem; }
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid #bcaaa4;
     border-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     font-size: 1rem;
     font-weight: bold;
     color: #3e2723;
@@ -211,7 +211,7 @@ details p { margin: 10px 0 0 0; font-size: 0.9rem; }
     color: #fff;
     border: none;
     padding: 12px 15px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     font-weight: bold;
     font-size: 1.05rem;
     border-radius: 4px;
@@ -252,7 +252,7 @@ details p { margin: 10px 0 0 0; font-size: 0.9rem; }
     display: flex; align-items: center; justify-content: center;
 }
 
-#tape-order-id { font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #212121; font-size: 0.9rem; letter-spacing: 1px; }
+#tape-order-id { font-family: inherit; font-weight: bold; color: #212121; font-size: 0.9rem; letter-spacing: 1px; }
 
 /* --- CÁC NÚT ĐIỀU KHIỂN TÀNG HÌNH (Đã căn lại tọa độ do đổi tỉ lệ) --- */
 .invisible-play-btn { position: absolute; bottom: 13.5%; left: 47%; width: 8.5%; height: 11%; background: transparent; border: none; cursor: pointer; outline: none; }
