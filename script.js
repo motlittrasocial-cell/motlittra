@@ -139,7 +139,7 @@ function updateQRCode(amount) {
     const ndck = `${sdt}`; 
     document.getElementById('ck-content').innerText = ndck;
     document.getElementById('ck-amount').innerText = amount.toLocaleString();
-    const bankBin = "vietcombank"; const stk = "123456789"; const accountName = "TIEM TRA CHAN THANH"; 
+    const bankBin = "Techcombank"; const stk = "19040159056018"; const accountName = "CONG TY TNHH MOTLITTRA"; 
     const qrUrl = `https://img.vietqr.io/image/${bankBin}-${stk}-compact2.png?amount=${amount}&addInfo=${encodeURIComponent(ndck)}&accountName=${encodeURIComponent(accountName)}`;
     document.getElementById('qr-image').src = qrUrl;
     document.getElementById('download-qr').href = qrUrl;
